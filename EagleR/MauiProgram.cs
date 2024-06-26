@@ -20,7 +20,7 @@ public static class MauiProgram
             .AddJsonStream(Assembly.GetExecutingAssembly().GetManifestResourceStream("EagleR.appsettings.json")!)
             .AddJsonStream(Assembly.GetExecutingAssembly().GetManifestResourceStream("EagleR.appsettings.json.user")!)
             .Build();
-        
+
         builder.Configuration.AddConfiguration(configuration);
 
 #if ANDROID

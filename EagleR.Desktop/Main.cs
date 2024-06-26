@@ -1,9 +1,8 @@
-﻿using System.Text.Json;
-using System.Text.RegularExpressions;
-using Azure.Storage.Queues;
+﻿using Azure.Storage.Queues;
 using Microsoft.Extensions.Configuration;
 using PuppeteerSharp;
-using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
+using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace EagleR.Desktop;
 
@@ -190,7 +189,7 @@ public partial class Main : Form
         string step2 = Step2Regex().Replace(step1, "");
         string step3 = Step3Regex().Replace(step2, "");
         string step4 = Step4Regex().Replace(step3, "");
-        
+
         return step4.Replace("\ud83d", "");
     }
 
