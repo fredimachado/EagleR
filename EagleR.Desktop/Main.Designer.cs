@@ -38,6 +38,8 @@ partial class Main
         trayIcon = new NotifyIcon(components);
         contextMenu = new ContextMenuStrip(components);
         openEaglerMenu = new ToolStripMenuItem();
+        settingsMenu = new ToolStripMenuItem();
+        menuSeparator1 = new ToolStripSeparator();
         quitEaglerMenu = new ToolStripMenuItem();
         tableLayoutPanel.SuspendLayout();
         statusStrip1.SuspendLayout();
@@ -108,21 +110,33 @@ partial class Main
         // contextMenu
         // 
         contextMenu.ImageScalingSize = new Size(28, 28);
-        contextMenu.Items.AddRange(new ToolStripItem[] { openEaglerMenu, quitEaglerMenu });
+        contextMenu.Items.AddRange(new ToolStripItem[] { openEaglerMenu, settingsMenu, menuSeparator1, quitEaglerMenu });
         contextMenu.Name = "contextMenu";
-        contextMenu.Size = new Size(138, 76);
+        contextMenu.Size = new Size(271, 156);
         // 
         // openEaglerMenu
         // 
         openEaglerMenu.Name = "openEaglerMenu";
-        openEaglerMenu.Size = new Size(137, 36);
+        openEaglerMenu.Size = new Size(270, 36);
         openEaglerMenu.Text = "Open";
         openEaglerMenu.Click += OpenEaglerMenu_Click;
+        // 
+        // settingsMenu
+        // 
+        settingsMenu.Name = "settingsMenu";
+        settingsMenu.Size = new Size(270, 36);
+        settingsMenu.Text = "Settings";
+        settingsMenu.Click += SettingsMenu_Click;
+        // 
+        // menuSeparator1
+        // 
+        menuSeparator1.Name = "menuSeparator1";
+        menuSeparator1.Size = new Size(267, 6);
         // 
         // quitEaglerMenu
         // 
         quitEaglerMenu.Name = "quitEaglerMenu";
-        quitEaglerMenu.Size = new Size(137, 36);
+        quitEaglerMenu.Size = new Size(270, 36);
         quitEaglerMenu.Text = "Quit";
         quitEaglerMenu.Click += QuitEaglerMenu_Click;
         // 
@@ -160,4 +174,6 @@ partial class Main
     private ContextMenuStrip contextMenu;
     private ToolStripMenuItem openEaglerMenu;
     private ToolStripMenuItem quitEaglerMenu;
+    private ToolStripMenuItem settingsMenu;
+    private ToolStripSeparator menuSeparator1;
 }

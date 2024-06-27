@@ -167,6 +167,11 @@ public partial class Main : Form
         ShowForm();
     }
 
+    private void SettingsMenu_Click(object sender, EventArgs e)
+    {
+        new Settings().ShowDialog();
+    }
+
     private void QuitEaglerMenu_Click(object sender, EventArgs e)
     {
         FormClosing -= Main_FormClosing;
